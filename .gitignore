@@ -1,0 +1,138 @@
+# Vivado FPGA Project .gitignore
+
+# =============================================================================
+# Generated Files - Do Not Commit
+# =============================================================================
+
+# Vivado synthesis and implementation runs
+*.runs/
+*.cache/
+*.hw/
+*.sim/
+
+# Generated IP files
+*.gen/
+
+# Vivado logs and journals
+*.jou
+*.log
+*.pb
+*.wdb
+*.wcfg
+vivado*.backup.jou
+vivado*.backup.log
+
+# Synthesis and implementation reports (optional - uncomment to keep reports)
+*.rpt
+*.rpx
+*.dcp
+*.vdi
+
+# Bitstream and binary files (optional - uncomment to keep final bitstream)
+*.bit
+*.bin
+*.ltx
+
+# Checkpoint files
+*.backup.vdi
+*.backup.dcp
+
+# Vivado GUI files
+*.debug
+*.xpr.orig
+webtalk*
+*.Xil/
+.Xil/
+
+# IP user files (generated simulation scripts)
+*.ip_user_files/sim_scripts/
+
+# Simulation waveform databases
+xsim.dir/
+*.wdb
+*.wcfg
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.directory
+
+# Python bytecode (for twiddle_generator.py)
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+
+# =============================================================================
+# Keep These Files - Essential for Project
+# =============================================================================
+
+# Source files - KEEP
+# *.v
+# *.vhd
+# *.sv
+# *.xdc
+# *.xci
+# *.py
+# *.coe
+# *.mem
+
+# Project file - KEEP
+# *.xpr
+
+# Documentation - KEEP
+# README.md
+# CLAUDE.md
+# LICENSE
+
+# =============================================================================
+# Specific Vivado Patterns
+# =============================================================================
+
+# Do not track IP cache (regenerated from .xci files)
+FFT.cache/
+
+# Do not track synthesis runs
+FFT.runs/
+
+# Do not track generated sources (regenerated from IP)
+FFT.gen/
+
+# Do not track simulation files
+FFT.sim/
+
+# Do not track hardware files
+FFT.hw/
+
+# Keep IP user files for initialization data (.coe files)
+# but exclude generated simulation scripts
+FFT.ip_user_files/sim_scripts/
+
+# Exclude IP static files (can be regenerated)
+FFT.ip_user_files/ipstatic/
+
+# =============================================================================
+# Edge Cases
+# =============================================================================
+
+# Exclude backup Vivado projects
+*.xpr.bak
+
+# Exclude NA files
+NA/
+
+# Exclude webtalk files
+.Xil/
+usage_statistics_webtalk.*
+webtalk_*.xml
+webtalk.jou
+webtalk.log
+
+# Exclude job files
+.jobs/
