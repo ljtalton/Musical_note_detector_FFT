@@ -4,7 +4,8 @@
 
 As a pianist and hardware enthusiast, I wanted to understand signal processing from the ground up—not just theoretically, but by building it in actual silicon. This project implements a complete audio processing pipeline on a Nexys A7-100T FPGA, from microphone input to note detection, with a Fast Fourier Transform core designed entirely from scratch.
 
-![Demo](assets/demo.gif) *(Coming soon)*
+![FPGA on Piano](assets/setup-piano.png)
+*The Nexys A7-100T FPGA board positioned on the piano, ready to detect notes in real-time*
 
 ---
 
@@ -150,6 +151,26 @@ The design scales efficiently—doubling FFT size adds one pipeline stage and do
 ## Results
 
 **It works!** The most satisfying moment was connecting a microphone, playing middle C on my piano, and watching the C4 bin light up on the LEDs while all other bins stayed dark.
+
+### Real-Time Note Detection in Action
+
+The images below show the FPGA successfully detecting different musical notes as they're played on the piano. The seven-segment displays show the detected note names, while the LEDs indicate the magnitude of the frequency bin corresponding to C4.
+
+<p align="center">
+  <img src="assets/detecting-note-1.png" width="45%" />
+  <img src="assets/detecting-note-2.png" width="45%" />
+</p>
+
+<p align="center">
+  <img src="assets/detecting-note-3.png" width="45%" />
+  <img src="assets/detecting-note-4.png" width="45%" />
+</p>
+
+<p align="center">
+  <img src="assets/detecting-note-5.png" width="45%" />
+</p>
+
+*The system accurately identifies different notes across the C4-B4 range as they're played*
 
 ### Accuracy
 
